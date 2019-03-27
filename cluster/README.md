@@ -1,4 +1,4 @@
-### Pesquisa sobre Cluster
+## Pesquisa sobre Cluster
 
 * Tipos e versões: cluster de alto desempenho, cluster de alta disponibilidade e cluster para balanceamento de carga
 
@@ -24,12 +24,12 @@ enter the following lines in the /etc/hosts file.
 192.168.1.145 hadoop-slave-1 
 192.168.56.1 hadoop-slave-2
 
-# Configurações do Hadoop
+**Configurações do Hadoop**
 
 Abra os arquivos abaixo e edite com as seguintes configurações:
 
 **core-site.xml**
-<configuration>
+``` <configuration>
    <property> 
       <name>fs.default.name</name> 
       <value>hdfs://hadoop-master:9000/</value> 
@@ -39,9 +39,10 @@ Abra os arquivos abaixo e edite com as seguintes configurações:
       <value>false</value> 
    </property> 
 </configuration>
+```
 
 **hdfs-site.xml**
-<configuration>
+``` <configuration>
    <property> 
       <name>dfs.data.dir</name> 
       <value>/opt/hadoop/hadoop/dfs/name/data</value> 
@@ -59,19 +60,21 @@ Abra os arquivos abaixo e edite com as seguintes configurações:
       <value>1</value> 
    </property> 
 </configuration>
+```
 
 **mapred-site.xml**
-<configuration>
+```<configuration>
    <property> 
       <name>mapred.job.tracker</name> 
       <value>hadoop-master:9001</value> 
    </property> 
 </configuration>
+```
 
-hadoop-env.sh
-export JAVA_HOME=/opt/jdk1.7.0_17
-export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true
-export HADOOP_CONF_DIR=/opt/hadoop/hadoop/conf
+hadoop-env.sh <br />
+export JAVA_HOME=/opt/jdk1.7.0_17 <br />
+export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true <br />
+export HADOOP_CONF_DIR=/opt/hadoop/hadoop/conf <br />
 
+* Verificar a possibilidade de execução em máquina virtual: tem como implementar um cluster em uma máquina virtual.
 
-* Verificar a possibilidade de execução em máquina virtual: tem como implementar um cluster em uma máquina virtual
