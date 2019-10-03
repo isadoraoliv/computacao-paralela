@@ -1,2 +1,2 @@
 ### Computação Paralela
-Por: Isadora, Luis e Samara
+Por: Isadora Oliveira, Luiz Krupp e Samara Vilefort
